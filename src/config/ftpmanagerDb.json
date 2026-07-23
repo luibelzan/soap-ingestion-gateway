@@ -1,0 +1,4 @@
+{
+  "connectionString": "postgres://postgres:Vosnos2013*@149.56.241.163:5432/ftpmanager",
+  "schema": "public"
+}

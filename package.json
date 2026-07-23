@@ -1,0 +1,27 @@
+{
+  "name": "gd-import-service",
+  "version": "0.1.0",
+  "description": "Servicio de importación de ficheros SABT (S02, S13, G01...) por distribuidora",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "ts-node src/watcher.ts",
+    "setup:folders": "ts-node src/scripts/setupFolders.ts"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.5.0",
+    "pg": "^8.13.0",
+    "chokidar": "^4.0.1",
+    "pino": "^9.5.0",
+    "p-queue": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.6.3",
+    "ts-node": "^10.9.2",
+    "pino-pretty": "^13.0.0"
+  }
+}

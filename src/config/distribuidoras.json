@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "Hidroelcarmen",
+    "carpetaImport": "C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import",
+    "connectionString": "postgres://usuario:password@localhost:5432/Hidroelcarmen",
+    "schema": "public"
+  },
+  {
+    "nombre": "Demo",
+    "carpetaImport": "C:\\GD\\Distribuidoras\\Demo\\Import",
+    "connectionString": "postgres://postgres:Vosnos2013*@149.56.241.163:5432/Demo",
+    "schema": "core"
+  }
+]
