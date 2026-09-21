@@ -69,6 +69,12 @@ import { S08Parser } from './s08/s08.parser';
 import { S08Repository } from './s08/s08.repository';
 import { S26Parser } from './s26/s26.parser';
 import { S26Repository } from './s26/s26.repository';
+import { G03Parser } from './g03/g03.parser';
+import { G03Repository } from './g03/g03.repository';
+import { G04Parser } from './g04/g04.parser';
+import { G04Repository } from './g04/g04.repository';
+import { G05Parser } from './g05/g05.parser';
+import { G05Repository } from './g05/g05.repository';
 
 /**
  * Registro central: añadir aquí una entrada por cada nuevo tipo de fichero
@@ -102,6 +108,9 @@ export const parserRegistry: Record<string, ParserRegistryEntry> = {
   S98: { parser: new S98Parser(), repository: new S98Repository() },
   G01: { parser: new G01Parser(), repository: new G01Repository() },
   G02: { parser: new G02Parser(), repository: new G02Repository() },
+  G03: { parser: new G03Parser(), repository: new G03Repository() },
+  G04: { parser: new G04Parser(), repository: new G04Repository() },
+  G05: { parser: new G05Parser(), repository: new G05Repository() },
   G53: { parser: new G53Parser(), repository: new G53Repository() },
   G56: { parser: new G56Parser(), repository: new G56Repository() },
   G57: { parser: new G57Parser(), repository: new G57Repository() },

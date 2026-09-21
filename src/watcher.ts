@@ -8,6 +8,7 @@ import { ConnectionManager, DistribuidoraConfig } from './db/connectionManager';
 import { processFile } from './core/fileProcessor';
 import { getFtpmanagerPool, getFtpmanagerSchema, closeFtpmanagerPool } from './db/ftpmanagerConnection';
 import { insertMasterLog } from './core/masterLog';
+import { startSoapListener, stopSoapListener, SoapListenerHandles } from './soapListenerBootstrap';
 
 // Carpeta de logs junto al proyecto (no dentro de dist/, para que
 // sobreviva a un `npm run build`)
@@ -119,9 +120,26 @@ for (const dist of distribuidoras) {
   logger.info(`Vigilando ${dist.carpetaImport} para la distribuidora "${dist.nombre}"`);
 }
 
+// Arranca el listener SOAP (servidores por instancia, Key Manager
+// Workers, endpoint de estadísticas) en el mismo proceso que el
+// vigilante de carpetas. No bloquea el arranque del watcher si falla.
+let soapListenerHandles: SoapListenerHandles | undefined;
+
+startSoapListener()
+  .then((handles) => {
+    soapListenerHandles = handles;
+    logger.info('SOAP Listener arrancado correctamente junto con el watcher de carpetas');
+  })
+  .catch((err) => {
+    logger.error({ err }, 'Error arrancando el SOAP Listener (el watcher de carpetas sigue funcionando igualmente)');
+  });
+
 process.on('SIGINT', async () => {
   logger.info('Cerrando conexiones y deteniendo el servicio...');
   await connectionManager.closeAll();
   await closeFtpmanagerPool();
+  if (soapListenerHandles) {
+    await stopSoapListener(soapListenerHandles);
+  }
   process.exit(0);
 });

@@ -799,3 +799,78 @@
 {"level":30,"time":1784287822358,"pid":9164,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Demo","fileName":"CIR4621637218_0_S26_0_20260717061157","tipo":"S26","estado":"PROCESADO","filasPrincipales":5,"filasError":0,"msg":"[Demo] S26 CIR4621637218_0_S26_0_20260717061157: PROCESADO"}
 {"level":30,"time":1784287823212,"pid":9164,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Demo","fileName":"CIR4621637218_0_S26_0_20260717083013","tipo":"S26","estado":"PROCESADO","filasPrincipales":3,"filasError":0,"msg":"[Demo] S26 CIR4621637218_0_S26_0_20260717083013: PROCESADO"}
 {"level":30,"time":1784290166458,"pid":9164,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1785220652964,"pid":14424,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1785220652970,"pid":14424,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1785220652970,"pid":14424,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":50,"time":1785220653356,"pid":14424,"hostname":"LAPTOP-SOFTWARE","err":{"type":"Error","message":"No SOAP listener servers started successfully","stack":"Error: No SOAP listener servers started successfully\n    at startSoapListener (C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\src\\soapListenerBootstrap.ts:77:11)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"},"msg":"Error arrancando el SOAP Listener (el watcher de carpetas sigue funcionando igualmente)"}
+{"level":30,"time":1785220677988,"pid":14424,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1785220701743,"pid":2576,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1785220701748,"pid":2576,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1785220701749,"pid":2576,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1785220702959,"pid":2576,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1785222914330,"pid":15720,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1785222914335,"pid":15720,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1785222914335,"pid":15720,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1785222915620,"pid":15720,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1788776183940,"pid":20824,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1788776183942,"pid":20824,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1788776183942,"pid":20824,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":50,"time":1788776184248,"pid":20824,"hostname":"LAPTOP-SOFTWARE","err":{"type":"Error","message":"No SOAP listener servers started successfully","stack":"Error: No SOAP listener servers started successfully\n    at startSoapListener (C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\src\\soapListenerBootstrap.ts:77:11)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"},"msg":"Error arrancando el SOAP Listener (el watcher de carpetas sigue funcionando igualmente)"}
+{"level":30,"time":1788776225820,"pid":20824,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1788776265038,"pid":12996,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1788776265040,"pid":12996,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1788776265040,"pid":12996,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":50,"time":1788776265359,"pid":12996,"hostname":"LAPTOP-SOFTWARE","err":{"type":"Error","message":"No SOAP listener servers started successfully","stack":"Error: No SOAP listener servers started successfully\n    at startSoapListener (C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\src\\soapListenerBootstrap.ts:77:11)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"},"msg":"Error arrancando el SOAP Listener (el watcher de carpetas sigue funcionando igualmente)"}
+{"level":30,"time":1788776286693,"pid":12996,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1788776298549,"pid":21640,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1788776298551,"pid":21640,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1788776298551,"pid":21640,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1788776299656,"pid":21640,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1788776599048,"pid":21640,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1788855886909,"pid":16488,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1788855886911,"pid":16488,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1788855886911,"pid":16488,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1788855888062,"pid":16488,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1789733584322,"pid":13564,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1789733584325,"pid":13564,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1789733584325,"pid":13564,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1789733585626,"pid":13564,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1789733643014,"pid":13564,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Demo","fileName":"G03.xml","tipo":"G03","estado":"ERROR","mensaje":"Nombre de fichero con formato inesperado: Nombre de fichero con formato inesperado (se esperaban 5 segmentos separados por \"_\"): G03.xml","msg":"[Demo] G03 G03.xml: ERROR"}
+{"level":30,"time":1789733703721,"pid":13564,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Demo","fileName":"CIRR208203203105_0_G03_0_20250203020030.xml","tipo":"G03","estado":"ERROR","mensaje":"Nombre de fichero con formato inesperado: Segmento de fecha inesperado en \"CIRR208203203105_0_G03_0_20250203020030.xml\": 20250203020030.xml","msg":"[Demo] G03 CIRR208203203105_0_G03_0_20250203020030.xml: ERROR"}
+{"level":30,"time":1789733731076,"pid":13564,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Demo","fileName":"CIRR208203203105_0_G03_0_20250203020030","tipo":"G03","estado":"DESCONOCIDO","mensaje":"Tipo de fichero \"G03\" no soportado todavía por el servicio","msg":"[Demo] G03 CIRR208203203105_0_G03_0_20250203020030: DESCONOCIDO"}
+{"level":30,"time":1789733738818,"pid":13564,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1789734003377,"pid":12340,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1789734003380,"pid":12340,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1789734003380,"pid":12340,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1789734004622,"pid":12340,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1789734005850,"pid":12340,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Demo","fileName":"CIRR208203203105_0_G03_0_20250203020030","tipo":"G03","estado":"PROCESADO","filasPrincipales":1162,"filasError":0,"msg":"[Demo] G03 CIRR208203203105_0_G03_0_20250203020030: PROCESADO"}
+{"level":30,"time":1789734034938,"pid":12340,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1789735420488,"pid":27608,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1789735420491,"pid":27608,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1789735420491,"pid":27608,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1789735420491,"pid":27608,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Heliodoro\\Import para la distribuidora \"Heliodoro\""}
+{"level":30,"time":1789735421685,"pid":27608,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1789735422841,"pid":27608,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Heliodoro","fileName":"CIR4621748247_0_G04_0_20260918020030","tipo":"G04","estado":"ERROR","mensaje":"relation \"core.t_g04\" does not exist","msg":"[Heliodoro] G04 CIR4621748247_0_G04_0_20260918020030: ERROR"}
+{"level":30,"time":1789735426099,"pid":27608,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Heliodoro","fileName":"CIR4621748247_0_G03_0_20260918020030","tipo":"G03","estado":"PROCESADO","filasPrincipales":1162,"filasError":0,"msg":"[Heliodoro] G03 CIR4621748247_0_G03_0_20260918020030: PROCESADO"}
+{"level":30,"time":1789735678526,"pid":27608,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1789735719387,"pid":19440,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1789735719389,"pid":19440,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1789735719390,"pid":19440,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1789735719390,"pid":19440,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Heliodoro\\Import para la distribuidora \"Heliodoro\""}
+{"level":30,"time":1789735720443,"pid":19440,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1789735721779,"pid":19440,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Heliodoro","fileName":"CIR4621748247_0_G04_0_20260918020030","tipo":"G04","estado":"PROCESADO","filasPrincipales":1162,"filasError":0,"msg":"[Heliodoro] G04 CIR4621748247_0_G04_0_20260918020030: PROCESADO"}
+{"level":30,"time":1789735829433,"pid":19440,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1789736224910,"pid":25560,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1789736224913,"pid":25560,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1789736224913,"pid":25560,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1789736224914,"pid":25560,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Heliodoro\\Import para la distribuidora \"Heliodoro\""}
+{"level":30,"time":1789736227045,"pid":25560,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Heliodoro","fileName":"CIR4621748247_0_G05_0_20260918020030","tipo":"G05","estado":"DESCONOCIDO","mensaje":"Tipo de fichero \"G05\" no soportado todavía por el servicio","msg":"[Heliodoro] G05 CIR4621748247_0_G05_0_20260918020030: DESCONOCIDO"}
+{"level":30,"time":1789736227209,"pid":25560,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1789736231756,"pid":25560,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
+{"level":30,"time":1789736276542,"pid":17512,"hostname":"LAPTOP-SOFTWARE","msg":"Log también disponible en: C:\\Users\\Administrador\\Documents\\Soap-listenerV2\\logs\\watcher.log"}
+{"level":30,"time":1789736276545,"pid":17512,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Hidroelcarmen\\Import para la distribuidora \"Hidroelcarmen\""}
+{"level":30,"time":1789736276546,"pid":17512,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Demo\\Import para la distribuidora \"Demo\""}
+{"level":30,"time":1789736276546,"pid":17512,"hostname":"LAPTOP-SOFTWARE","msg":"Vigilando C:\\GD\\Distribuidoras\\Heliodoro\\Import para la distribuidora \"Heliodoro\""}
+{"level":30,"time":1789736282719,"pid":17512,"hostname":"LAPTOP-SOFTWARE","msg":"SOAP Listener arrancado correctamente junto con el watcher de carpetas"}
+{"level":30,"time":1789736284404,"pid":17512,"hostname":"LAPTOP-SOFTWARE","distribuidora":"Heliodoro","fileName":"CIR4621748247_0_G05_0_20260918020030","tipo":"G05","estado":"PROCESADO","filasPrincipales":1163,"filasError":0,"msg":"[Heliodoro] G05 CIR4621748247_0_G05_0_20260918020030: PROCESADO"}
+{"level":30,"time":1789740008460,"pid":17512,"hostname":"LAPTOP-SOFTWARE","msg":"Cerrando conexiones y deteniendo el servicio..."}
