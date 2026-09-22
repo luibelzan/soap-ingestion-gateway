@@ -112,7 +112,7 @@ export async function recalcularReadingIndexS02(
          SELECT
              d::date AS fecha,
              ROUND(EXTRACT(EPOCH FROM (
-                 ((d + 1)::timestamp AT TIME ZONE $2) - (d::timestamp AT TIME ZONE $2)
+                 ((d::date + 1)::timestamp AT TIME ZONE $2) - (d::date::timestamp AT TIME ZONE $2)
              )) / 3600)::smallint AS horas_esperadas
          FROM generate_series(
              CURRENT_DATE - ($1 || ' days')::interval,
@@ -134,10 +134,18 @@ export async function recalcularReadingIndexS02(
   return result.rowCount ?? 0;
 }
 
+export interface DuracionRecalculoReadingIndex {
+  s02Ms: number;
+  s04Ms: number;
+  s05Ms: number;
+  totalMs: number;
+}
+
 export interface ResumenRecalculoReadingIndex {
   s02: number;
   s04: number;
   s05: number;
+  duracion: DuracionRecalculoReadingIndex;
 }
 
 export interface OpcionesRecalculoReadingIndex {
@@ -149,18 +157,30 @@ export interface OpcionesRecalculoReadingIndex {
 
 /**
  * Recalcula los tres índices de lectura de una distribuidora de una
- * vez. Cada uno es una única sentencia SQL set-based (sin bucles ni
- * consultas por fila desde Node), pensada para tablas de millones de
- * registros.
+ * vez, midiendo cuánto tarda cada uno (y el total), para poder ver en
+ * el log dónde está el cuello de botella si el recálculo empieza a
+ * tardar demasiado según crece el volumen de datos.
  */
 export async function recalcularReadingIndex(
   pool: Pool,
   schema: string,
   opciones?: OpcionesRecalculoReadingIndex
 ): Promise<ResumenRecalculoReadingIndex> {
-  const s02 = await recalcularReadingIndexS02(pool, schema, opciones?.diasS02, opciones?.zonaHoraria);
-  const s04 = await recalcularReadingIndexS04(pool, schema, opciones?.mesesS04);
-  const s05 = await recalcularReadingIndexS05(pool, schema, opciones?.diasS05);
+  const inicioTotal = Date.now();
 
-  return { s02, s04, s05 };
+  const inicioS02 = Date.now();
+  const s02 = await recalcularReadingIndexS02(pool, schema, opciones?.diasS02, opciones?.zonaHoraria);
+  const s02Ms = Date.now() - inicioS02;
+
+  const inicioS04 = Date.now();
+  const s04 = await recalcularReadingIndexS04(pool, schema, opciones?.mesesS04);
+  const s04Ms = Date.now() - inicioS04;
+
+  const inicioS05 = Date.now();
+  const s05 = await recalcularReadingIndexS05(pool, schema, opciones?.diasS05);
+  const s05Ms = Date.now() - inicioS05;
+
+  const totalMs = Date.now() - inicioTotal;
+
+  return { s02, s04, s05, duracion: { s02Ms, s04Ms, s05Ms, totalMs } };
 }

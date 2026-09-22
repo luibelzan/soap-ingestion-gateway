@@ -1,6 +1,6 @@
 import { XMLParser } from 'fast-xml-parser';
 import { FileParser } from '../../core/types';
-import { parseFh } from '../../core/fhParser';
+import { tryParseFh } from '../../core/fhParser';
 import { S04Concentrador, S04Contador, S04File, S04Periodo } from './s04.types';
 
 const xmlParser = new XMLParser({
@@ -10,6 +10,12 @@ const xmlParser = new XMLParser({
   // porque fast-xml-parser devuelve un objeto suelto (no array) si solo hay 1.
   isArray: (name) => ['Cnc', 'Cnt', 'S04', 'Value'].includes(name),
 });
+
+// Fecha/hora centinela para Fhi/Fhf/Fx que no tengan un formato válido.
+// Se usa en vez de fallar todo el fichero, para no perder el resto de
+// datos de un periodo por una fecha corrupta puntual.
+const FECHA_POR_DEFECTO = '2000-01-01';
+const HORA_POR_DEFECTO = '00:00:00';
 
 function toNumber(value: unknown): number {
   if (value === undefined || value === null || value === '') return 0;
@@ -27,6 +33,26 @@ function toNullableNumber(value: unknown): number | null {
     throw new Error(`Valor numérico inválido: "${value}"`);
   }
   return n;
+}
+
+/**
+ * Parsea un valor Fh (Fhi/Fhf/Fx). Si no tiene el formato esperado
+ * (fecha-hora inválida/corrupta), en vez de lanzar una excepción y
+ * tumbar el procesado de todo el fichero, se usa la fecha centinela
+ * 2000-01-01 — así se puede seguir procesando el resto del periodo.
+ * El valor original se sigue guardando siempre en *Raw, para poder
+ * detectar/auditar estos casos después.
+ */
+function parseFhConDefecto(raw: string): {
+  fecha: string;
+  hora: string;
+  flagHorario: string | null;
+} {
+  const parsed = tryParseFh(raw);
+  if (!parsed) {
+    return { fecha: FECHA_POR_DEFECTO, hora: HORA_POR_DEFECTO, flagHorario: null };
+  }
+  return { fecha: parsed.fecha, hora: parsed.hora, flagHorario: parsed.flagHorario };
 }
 
 /**
@@ -51,16 +77,18 @@ function splitValues(valuesRaw: any[]): { valorA: any; valorI: any } {
 }
 
 function parseS04Periodo(raw: any): S04Periodo {
-  const { fecha: fechaInicio, hora: horaInicio, flagHorario: flagHorarioInicio } = parseFh(
+  const { fecha: fechaInicio, hora: horaInicio, flagHorario: flagHorarioInicio } = parseFhConDefecto(
     String(raw.Fhi)
   );
-  const { fecha: fechaFin, hora: horaFin, flagHorario: flagHorarioFin } = parseFh(String(raw.Fhf));
+  const { fecha: fechaFin, hora: horaFin, flagHorario: flagHorarioFin } = parseFhConDefecto(
+    String(raw.Fhf)
+  );
 
   let fechaMax: string | null = null;
   let horaMax: string | null = null;
   let flagHorarioMax: string | null = null;
   if (raw.Fx !== undefined) {
-    const parsedFx = parseFh(String(raw.Fx));
+    const parsedFx = parseFhConDefecto(String(raw.Fx));
     fechaMax = parsedFx.fecha;
     horaMax = parsedFx.hora;
     flagHorarioMax = parsedFx.flagHorario;

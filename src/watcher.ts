@@ -9,6 +9,7 @@ import { processFile } from './core/fileProcessor';
 import { getFtpmanagerPool, getFtpmanagerSchema, closeFtpmanagerPool } from './db/ftpmanagerConnection';
 import { insertMasterLog } from './core/masterLog';
 import { startSoapListener, stopSoapListener, SoapListenerHandles } from './soapListenerBootstrap';
+import { startReadingIndexScheduler } from './core/readingIndexScheduler';
 
 // Carpeta de logs junto al proyecto (no dentro de dist/, para que
 // sobreviva a un `npm run build`)
@@ -133,6 +134,26 @@ startSoapListener()
   .catch((err) => {
     logger.error({ err }, 'Error arrancando el SOAP Listener (el watcher de carpetas sigue funcionando igualmente)');
   });
+
+// Recalcula periódicamente los índices de lectura (S02/S04/S05) de
+// todas las distribuidoras, reutilizando el mismo connectionManager
+// (no abre conexiones nuevas). Cada ejecución cubre TODOS los
+// contadores de golpe (consultas set-based). A 10 minutos son ~144
+// pasadas/día — vigila la carga en BD si crece el volumen o el número
+// de distribuidoras.
+const INTERVALO_READING_INDEX_MINUTOS = Number(process.env.READING_INDEX_INTERVAL_MINUTOS) || 10;
+startReadingIndexScheduler(
+  connectionManager,
+  distribuidoras,
+  logger,
+  {
+    diasS02: 60,
+    mesesS04: 2,
+    diasS05: 35,
+    zonaHoraria: 'Europe/Madrid',
+  },
+  INTERVALO_READING_INDEX_MINUTOS
+);
 
 process.on('SIGINT', async () => {
   logger.info('Cerrando conexiones y deteniendo el servicio...');
